@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country</title>
+</head>
+<body>
+    <h1>Where are you live?</h1>
+    <p>Where do you live? <input type="text" name="txt" id="txt"></p>
+    <input type="button" value="Verify" onclick="verify()">
+    <div id="res"></div>
+
+    <script>
+        function verify() {
+            var txt = document.querySelector('input#txt').value
+            var res = document.querySelector('div#res')
+
+            if (txt == 'Brasil' || txt == 'Brazil') {
+                res.innerHTML = `You are a <strong>Brazilian</strong>!`
+            } else {
+                res.innerHTML = `You are a <strong>Foreigner</strong>!`
+            }
+        }
+    </script>
+</body>
+</html>

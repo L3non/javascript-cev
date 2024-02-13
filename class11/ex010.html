@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Fine system</h1>
+    <p>Car speed: <input type="number" name="txts" id="txts">Km/h</p>
+    <input type="button" value="Verify" onclick="calculate()">
+    <div id="res"></div>
+
+    <script>
+        function calculate(){
+            var txts = document.querySelector('input#txts')
+            var s = Number(txts.value)
+            var res = document.querySelector('div#res')
+            
+            res.innerHTML = `Driving at <strong>${s}Km/h</strong>`
+            res.innerHTML += `<p>Always drive with life belt!</p>`
+
+            if (s > 60){
+                res.innerHTML += `<p>You are <strong>fined</strong> for speeding</p>`
+            }
+        }
+    </script>
+</body>
+</html>
